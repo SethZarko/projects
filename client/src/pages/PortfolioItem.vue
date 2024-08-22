@@ -9,7 +9,7 @@ export default {
     methods: {
         async fetchProject(id) {
 
-            const response = await fetch(`http://localhost:8000/projects/${id}`);
+            const response = await fetch(`https://projects-gwox.onrender.com/projects/${id}`);
 
             if (response.ok) {
                 this.project = await response.json();
