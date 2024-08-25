@@ -48,6 +48,9 @@ export default {
                 </div>
             </div>
 
+            <div v-if="projects.length === 0">
+                <h1>Loading Projects...</h1>
+            </div>
         </div>
     </section>
 </template>
