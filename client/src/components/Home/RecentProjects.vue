@@ -43,6 +43,7 @@ export default {
         <hr class="title-underline">
         
         <div class="projects-container">
+            <h1 v-if="projects.length === 0">Loading Projects...</h1>
             <h1 v-if="responseError">{{ responseError }}</h1>
 
             <div class="project-container" v-for="project in projects" :key="project._id">
