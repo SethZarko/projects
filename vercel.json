@@ -2,7 +2,7 @@
     "rewrites": [
       {
         "source": "/(.*)",
-        "destination": "/index.html"
+        "destination": "https://www.sethsellslondon.com/index.html"
       }
     ]
-  }
+}
