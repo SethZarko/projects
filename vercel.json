@@ -1,8 +1,8 @@
 {
     "rewrites": [
       {
-        "source": "/:(.*)",
-        "destination": "https://www.sethsellslondon.com/:index.html*"
+        "source": "/(.*)",
+        "destination": "https://www.sethsellslondon.com/index.html*"
       }
     ]
 }
