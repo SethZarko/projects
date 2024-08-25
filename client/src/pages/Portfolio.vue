@@ -2,7 +2,8 @@
 export default {
     data() {
         return {
-            projects: []
+            projects: [],
+            responseError: null
         }
     },
     methods: {
@@ -15,7 +16,7 @@ export default {
         },
         async getAllProjects() {
             try {
-                const response = await fetch('https://projects-gwox.onrender.com/projects/all')
+                const response = await fetch('https://projects-gwox.onrender.com/projects/al')
 
                 if (response.ok) {
                     this.projects = await response.json()
@@ -39,7 +40,14 @@ export default {
 <template>
     <section id="portfolio-page">
         <h1>All Projects</h1>
-        <div class="projects-container">
+        <div class="loading-container" v-if="projects.length === 0 && !responseError">
+            <h1>Loading Projects...</h1>
+        </div>
+
+        <div class="loading-container" v-if="responseError">
+            <h1>{{ responseError }}</h1>
+        </div>
+        <div class="projects-container" v-if="projects.length !== 0">
 
             <div v-for="project in projects" :key="project._id" class="project-item">
                 <iframe :src="project.url" frameborder="0"></iframe>
@@ -47,15 +55,9 @@ export default {
                     more details
                 </div>
             </div>
-
-            <div v-if="projects.length === 0">
-                <h1>Loading Projects...</h1>
-            </div>
         </div>
     </section>
 </template>
-
-
 
 <style scoped>
 #portfolio-page {
@@ -111,5 +113,16 @@ iframe {
 
 .go-to-btn:hover {
     background-color: rgba(255, 255, 255, 0.25);
+}
+
+.loading-container {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: rgb(54, 54, 54);
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 </style>
