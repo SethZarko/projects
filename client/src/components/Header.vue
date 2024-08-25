@@ -4,17 +4,34 @@ import Nav from './Nav.vue'
 export default {
     data() {
         return {
-
+            isSticky: false, 
         }
     },
     components: {
         Nav
-    }
+    },
+    methods: {
+        handleScroll() {
+            const scrollPosition = window.scrollY;
+            
+            if (scrollPosition > 100) {
+                this.isSticky = true;
+            } else {
+                this.isSticky = false;
+            }
+        }
+    },
+    mounted() {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    beforeUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    },
 }
 </script>
 
 <template>
-    <header>
+    <header :class="{ 'sticky': isSticky }">
         <div class="overlay"></div>
         <div class="header-container">
             <h1>sethZDEV</h1>
@@ -30,6 +47,17 @@ header {
     width: 100%;
     margin: 0 auto;
 }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
 
 .header-container {
     width: 100%;
