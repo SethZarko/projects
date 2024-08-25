@@ -16,7 +16,7 @@ export default {
         },
         async getAllProjects() {
             try {
-                const response = await fetch('https://projects-gwox.onrender.com/projects/al')
+                const response = await fetch('https://projects-gwox.onrender.com/projects/all')
 
                 if (response.ok) {
                     this.projects = await response.json()
