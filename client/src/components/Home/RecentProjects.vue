@@ -59,21 +59,23 @@ export default {
                 <hr>
             </div>
             <router-link to="/portfolio" @click="this.scrollToTop">All Projects</router-link>
-
+            <hr class="divisor">
+            <br>
         </div>
     </section>
 </template>
 
 <style scoped>
 #recent-projects {
+    width: 100%;
     background-color: rgb(54, 54, 54);
-    padding: 2em;
+    padding: 0.5em;
 }
 
 #recent-projects h1 {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     letter-spacing: 1px;
     margin: 0.5em auto 0.5em;
     color: white;
@@ -96,7 +98,7 @@ export default {
 }
 
 .projects-container a {
-    width: 100%;
+    width: 90%;
     max-width: 500px;
     text-align: center;
     margin: 0 auto 1em; 
@@ -122,6 +124,15 @@ export default {
     align-items: center;
     margin: 2em 0 2em 0;
     padding: 0.5em;
+}
+
+.project-container h1 {
+    font-size: 1.75rem !important;
+}
+
+.divisor {
+    width: 80%;
+    margin: 0 auto;
 }
 
 .go-to-btn {
@@ -162,6 +173,6 @@ iframe {
     width: 100%;
     margin: 0 auto;
     height: 600px;
-    border: solid 2px rgb(20, 173, 255);;
+    border: solid 2px rgb(20, 173, 255);
 }
 </style>

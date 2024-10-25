@@ -75,7 +75,7 @@ h1 {
 }
 
 .projects-container {
-    width: 90%;
+    width: 100%;
     margin: 2em auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -88,10 +88,12 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 320px;
+    margin: 0 auto;
 }
 
 iframe {
-    width: 100%;
+    width: 95%;
     height: 350px;
     background-color: white;
     border: solid 1px red;

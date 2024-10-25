@@ -59,6 +59,10 @@ export default {
     padding: 2em;
 }
 
+.hero-text-container a {
+    font-size: 0.75rem !important;
+}
+
 .hero-img-container {
     width: 100%;
     height: 100%;

@@ -40,11 +40,11 @@ export default {
 
 .card-sub-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     display: grid;
     gap: 3em;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     justify-items: center;
     align-items: center;
 }
@@ -62,7 +62,7 @@ export default {
 
 .card h3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.35rem;
+    font-size: 2rem;
     color: #333;
     letter-spacing: 1px;
     margin-bottom: 0.65em;
@@ -70,11 +70,17 @@ export default {
 
 .card p {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     width: 95%;
     margin: 0 auto;
     color: white;
     line-height: 1.5;
+}
+
+@media (min-width: 375px) {
+    .card-sub-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 }
 
 @media (min-width: 942px) {

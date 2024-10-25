@@ -37,13 +37,14 @@ export default {
                 <li>Bootstrap, Tailwind, ChakraUI, Material UI, SASS/SCSS</li>
                 <li>Nuxt.js</li>
                 <li>Next.js</li>
+                <li>Nest.js</li>
             </ul>
-
+            <hr>
             <div class="this-site-container">
                 <h3>This Website's Stack:</h3>
-                <p>Frontend: Vue.js</p>
+                <p>Frontend: Vue.js - (Options API)</p>
                 <p>Backend: Node.js/Express</p>
-                <p>Database: MongoDB - No ORM</p>
+                <p>Database: MongoDB</p>
                 <p>Contact Form: React + FormSpree</p>
                 <p>CSS: Raw CSS</p>
             </div>
@@ -77,17 +78,24 @@ li {
     margin: 1.5em auto 1.75em;
 }
 
+.tech-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
 .tech-container h3:nth-of-type(3) {
     margin-bottom: 0 !important;
 }
 
 .tech-container p {
     width: 100%;
+    max-width: 800px;
     font-family: 'Roboto-Mono', sans-serif;
     font-weight: 100;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 1.15em;
     font-size: 1.25rem;
     margin: 1em auto;
@@ -97,13 +105,13 @@ li {
 }
 
 .tech-container img {
-    width: 50px;
-    height: 50px;
+    width: 27px;
+    height: 27px;
     object-fit: contain;
 }
 
 .mongoose {
-    width: 85px !important;
+    width: 55px !important;
     margin-left: -25px;
 }
 
@@ -113,18 +121,36 @@ li {
 
 .tech-container ul li {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.35rem;
+    font-size: 1.1rem;
     margin: 1em auto;
 }
 
 .this-site-container {
     text-align: left;
+    width: 100%;
 }
 
 .this-site-container p {
     display: flex;
     justify-content: space-between;
     gap: 3em;
+    font-size: 1rem;
+}
+
+@media (min-width: 425px) {
+    .tech-container img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .mongoose {
+        width: 95px !important;
+        margin-left: -30px;
+    }
+
+    .this-site-container p {
+        font-size: 1.15rem;
+    }
 }
 
 @media (min-width: 650px) {
@@ -136,6 +162,12 @@ li {
     .mongoose {
         width: 125px !important;
         margin-left: -50px;
+    }
+}
+
+@media (min-width: 768px) {
+    h3 {
+        font-size: 1.75rem;
     }
 }
 </style>

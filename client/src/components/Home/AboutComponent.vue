@@ -3,12 +3,12 @@ export default {
     data() {
         return {
             aboutInfo: [
-                { text: 'Web Development' },
-                { text: 'Honours Degree in Philosophy' },
-                { text: 'Musician in a band' },
-                { text: 'Former Realtor' },
-                { text: 'Commercial Insurance Broker' },
-                { text: 'Self Proclaimed Nerd' },
+                { id: 1, text: 'Web Development' },
+                { id: 2, text: 'Honours Degree in Philosophy' },
+                { id: 3, text: 'Musician in a band' },
+                { id: 4, text: 'Former Realtor' },
+                { id: 5, text: 'Commercial Insurance Broker' },
+                { id: 6, text: 'Self Proclaimed Nerd' },
             ]
         }
     }
@@ -20,9 +20,9 @@ export default {
         <h1>Brief Bio</h1>
         <div class="about-me-container">
             <div class="sub-one">
-                <div v-for="text in aboutInfo" class="about-item-container">
+                <div v-for="elem in aboutInfo" :key="elem.id" class="about-item-container">
                     <i class="fa-solid fa-circle-check"></i>
-                    <p>{{ text.text }}</p>
+                    <p>{{ elem.text }}</p>
                 </div>
             </div>
 
@@ -32,7 +32,7 @@ export default {
                 <h4>A little about me</h4>
                 <p class="mini-bio">I am a self-taught web developer, with a passion for creating and working on projects that involve web development and design, business, and client
                     service. <br><br> I have a unique and eclectic background that spans across real estate, law,
-                    insurance, music, and philosophy. <br> <br> I believe that my professional background provides a
+                    insurance, music, and philosophy. <br> <br> I believe that my personal and professional background provide a
                     creative and practical perspective on web development and how web applications can best serve the needs of various businesses.</p>
             </div>
 

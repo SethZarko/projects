@@ -65,13 +65,18 @@ export default {
 }
 
 .project-title-container {
-    width: 350px;
+    width: 320px;
     margin: 0 auto;
     padding: 1em 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+.this-site-container, .text-container {
+    width: 100%;
+    margin: 0 auto;
 }
 
 h1 {
@@ -83,14 +88,14 @@ h1 {
 }
 
 iframe {
-    width: 100%;
+    width: 85%;
     height: 600px;
     margin: 0 auto;
     border: solid 1px rgb(20, 173, 255);
 }
 
 hr {
-    width: 90%;
+    width: 80%;
     margin: 1em auto;
 }
 
@@ -121,6 +126,11 @@ hr {
     background-color: rgba(255, 255, 255, 0.25);
 }
 
+.project-details-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
 .project-details-container h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -139,7 +149,7 @@ hr {
     font-family: 'Roboto-Mono', sans-serif;
     font-weight: 100;
     line-height: 1.6;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     margin: 1em auto;
     border: solid 1px rgb(20, 173, 255);
     padding: 1em;
