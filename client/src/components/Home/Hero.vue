@@ -86,7 +86,7 @@ h4 {
 
 h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3.25rem;
+    font-size: 3.1rem;
     font-weight: 800;
     line-height: 1.0;
     text-shadow: -1px 0.5px 1px rgb(20, 173, 255);
