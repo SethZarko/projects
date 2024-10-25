@@ -93,7 +93,7 @@ h1 {
 }
 
 iframe {
-    width: 95%;
+    width: 90%;
     height: 350px;
     background-color: white;
     border: solid 1px red;
