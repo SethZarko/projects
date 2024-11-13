@@ -14,7 +14,7 @@ export default {
         handleScroll() {
             const scrollPosition = window.scrollY;
             
-            if (scrollPosition > 100) {
+            if (scrollPosition > 300) {
                 this.isSticky = true;
             } else {
                 this.isSticky = false;
@@ -46,6 +46,7 @@ header {
     position: relative;
     width: 100%;
     margin: 0 auto;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
 }
 
 .sticky {
@@ -67,6 +68,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 1.5em 2.5em;
+    transition: padding 0.3s ease;
 }
 
 .overlay {
