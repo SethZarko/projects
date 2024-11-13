@@ -40,6 +40,7 @@ export default {
 <template>
     <section id="portfolio-page">
         <h1>All Projects</h1>
+
         <div class="loading-container" v-if="projects.length === 0 && !responseError">
             <h1>Loading Projects...</h1>
         </div>
@@ -47,6 +48,7 @@ export default {
         <div class="loading-container" v-if="responseError">
             <h1>{{ responseError }}</h1>
         </div>
+
         <div class="projects-container" v-if="projects.length !== 0">
 
             <div v-for="project in projects" :key="project._id" class="project-item">
@@ -55,6 +57,7 @@ export default {
                     more details
                 </div>
             </div>
+
         </div>
     </section>
 </template>
@@ -69,7 +72,7 @@ export default {
 
 h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
+    font-size: 1.75rem;
     color: white;
     text-align: center
 }
@@ -78,7 +81,7 @@ h1 {
     width: 100%;
     margin: 2em auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
     justify-content: center;
     align-content: center;
     gap: 3em;
@@ -88,12 +91,12 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 320px;
+    width: 295px;
     margin: 0 auto;
 }
 
 iframe {
-    width: 90%;
+    width: 100%;
     height: 350px;
     background-color: white;
     border: solid 1px red;
@@ -127,4 +130,31 @@ iframe {
     justify-content: center;
     flex-direction: column;
 }
+
+@media (min-width: 375px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .project-item {
+        width: 350px;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}
+
+@media (min-width: 650px) {
+    .project-item {
+        width: 500px;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}
+
+
+
 </style>
