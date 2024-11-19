@@ -44,9 +44,9 @@ export default {
             <div class="bar"></div>
         </div>
         <ul>
-            <li><router-link to="/" active-class="active">Home</router-link></li>
-            <li><router-link to="/portfolio" active-class="active">Portfolio</router-link></li>
-            <li><router-link to="/about" active-class="active">About</router-link></li>
+            <li><router-link to="/" @click="this.scrollToTop" active-class="active">Home</router-link></li>
+            <li><router-link to="/portfolio" @click="this.scrollToTop"  active-class="active">Portfolio</router-link></li>
+            <li><router-link to="/about" @click="this.scrollToTop"  active-class="active">About</router-link></li>
         </ul>
 
         <!-- MOBILE NAV -->
@@ -59,9 +59,9 @@ export default {
                     <div class="bar"></div>
                 </div>
             </div>
-            <li><router-link to="/" active-class="active">Home</router-link></li>
-            <li><router-link to="/portfolio" active-class="active">Portfolio</router-link></li>
-            <li><router-link to="/about" active-class="active">About</router-link></li>
+            <li><router-link to="/" @click="this.scrollToTop"  active-class="active">Home</router-link></li>
+            <li><router-link to="/portfolio" @click="this.scrollToTop"  active-class="active">Portfolio</router-link></li>
+            <li><router-link to="/about" @click="this.scrollToTop"  active-class="active">About</router-link></li>
             <small>Seth Zarkovich. Web Dev. {{ year }} &copy;</small>
         </ul>
     </nav>
