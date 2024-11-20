@@ -27,6 +27,7 @@ export default {
 <template>
     <section id="portfolio-item">
         <div class="project-container">
+            <h1 v-if="!project">Loading Project...</h1>
             <div class="project-title-container">
                 <h1>{{ project.name }}</h1>
                 <iframe :src="project.url" frameborder="0"></iframe>
