@@ -16,7 +16,7 @@ export default {
         },
         async getAllProjects() {
             try {
-                const response = await fetch('https://projects-gwox.onrender.com/projects/all')
+                const response = await fetch('https://projects-gwox.onrender.com/projects/all?limit=6')
 
                 if (response.ok) {
                     this.projects = await response.json()
@@ -29,7 +29,7 @@ export default {
                 this.log(error, 'error');
             }
 
-        },
+        }
     },
     mounted() {
         this.getAllProjects()
@@ -47,11 +47,14 @@ export default {
             <h1 v-if="responseError">{{ responseError }}</h1>
 
             <div class="project-container" v-for="project in projects" :key="project._id">
-                <h1><i class="fa-solid fa-code"></i>{{ project.name }}<i class="fa-solid fa-code"></i></h1>
+                <h1><i class="fa-solid fa-code"></i> {{ project.name }} <i class="fa-solid fa-code"></i></h1>
                 <div class="box">
                     <iframe :src="project.url" loading="lazy"></iframe>
                 </div>
                 <div class="id-container">
+                    <div class="date-added-container">
+                        <p class="date-added">Date Added: {{ this.formatDate(project.createdAt) }}</p>
+                    </div>
                     <div :key="project._id" class="go-to-btn" @click="handleClick(project._id)">
                         more details
                     </div>
@@ -137,6 +140,7 @@ export default {
 
 .go-to-btn {
     width: 200px;
+    margin: 0 auto;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     color: white;
@@ -148,6 +152,21 @@ export default {
 
 .go-to-btn:hover {
     background-color: rgba(255, 255, 255, 0.25);
+}
+
+.id-container {
+    width: 100%;
+}
+
+.date-added-container {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    margin: 5px auto 35px;
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+    color: white;
+    text-align: center;
 }
 
 .project-container h1 {

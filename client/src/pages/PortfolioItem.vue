@@ -31,6 +31,9 @@ export default {
                 <h1>{{ project.name }}</h1>
                 <iframe :src="project.url" frameborder="0"></iframe>
             </div>
+            <div class="date-added-container">
+                <div class="date-added">Date Added: {{ this.formatDate(project.createdAt) }}</div>
+            </div>
             <hr>
             <div class="project-details-container">
 
@@ -124,6 +127,16 @@ hr {
 
 .project-container a:hover {
     background-color: rgba(255, 255, 255, 0.25);
+}
+
+.date-added-container {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    margin: 5px auto 35px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
 }
 
 .project-details-container {
