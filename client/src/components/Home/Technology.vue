@@ -10,7 +10,7 @@ export default {
 
 <template>
     <section id="tech-comp">
-        <h1>For the nerds 🤓</h1>
+        <h1>For the devs 🤓</h1>
         <div class="tech-container">
 
             <h3>Main Stack:</h3>

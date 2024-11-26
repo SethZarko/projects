@@ -8,7 +8,7 @@ export default {
                 { id: 3, text: 'Musician in a band' },
                 { id: 4, text: 'Former Realtor' },
                 { id: 5, text: 'Commercial Insurance Broker' },
-                { id: 6, text: 'Self Proclaimed Nerd' },
+                { id: 6, text: 'Self Taught Web Developer' },
             ]
         }
     }
