@@ -27,11 +27,12 @@ import ReactWrapper from '../components/Home/ReactWarapper.vue'
         <section id="about-page">
             <h1>My name is Seth</h1>
             <hr>
-            <h2>I am a self-taught web developer, from Ontario, Canada.</h2>
+            <h3>I am a self-taught web developer, from Ontario, Canada.</h3>
+            <hr>
 
             <br>
             <br>
-            <h3>My web development origins</h3>
+            <h3>Web Development Origins</h3>
             <p>I began my journey in web development at the end of 2021. The way I discovered my love and passion for web development was through another love and passion of mine - music. I have enjoyed tinkering around as a hobbyist audio engineer, producer, and music composer since I was 13, and I've been a musician all my life - first learning to play guitar at the age of 6. 
             <br>
             <br>
@@ -53,7 +54,9 @@ import ReactWrapper from '../components/Home/ReactWarapper.vue'
             <br>
             <br>
 
-            <h3>I aim to network with individuals and businesses seeking custom web applications and with software agencies or employers interested in hiring a motivated, self-taught web developer.</h3>
+            <hr>
+            <h3 class="network-para">I aim to network with individuals and businesses seeking custom web applications and with software agencies or employers interested in hiring a motivated, self-taught web developer.</h3>
+            <hr>
 
             <br>
             <br>
@@ -95,7 +98,7 @@ import ReactWrapper from '../components/Home/ReactWarapper.vue'
         text-align: center;
         font-family: 'Poppins', sans-serif;
         font-size: 1.75rem;
-        margin: 1em auto 0.25em;
+        margin: 0 auto 2em;
     }
 
     hr {
@@ -104,8 +107,15 @@ import ReactWrapper from '../components/Home/ReactWarapper.vue'
     }
 
     h2, h3 {
+        width: 100% !important;
         text-align: center;
         font-family: 'Montserrat', sans-serif;
+    }
+
+    .network-para {
+        margin: 0 auto;
+        font-size: 1rem;
+        line-height: 1.6;
     }
 
     h2 {
@@ -125,6 +135,12 @@ import ReactWrapper from '../components/Home/ReactWarapper.vue'
         margin: 0 auto;
     }
 
+    @media (min-width: 500px) {
+        .network-para {
+            width: 80% !important;
+        }
+    }
+
     @media (min-width: 768px) {
 
         #about-page {
@@ -139,9 +155,29 @@ import ReactWrapper from '../components/Home/ReactWarapper.vue'
         }
     }
 
+    @media (min-width: 1024px) {
+        .network-para {
+            width: 70% !important;
+        }
+    }
+
     @media (min-width: 1200px) {
         p {
-            width: 60%;
+            width: 55%;
+        }
+
+        .network-para {
+            width: 55% !important;
+        }
+    }
+
+    @media (min-width: 1920px) {
+        p {
+            width: 45%;
+        }
+
+        .network-para {
+            width: 45% !important;
         }
     }
 </style>

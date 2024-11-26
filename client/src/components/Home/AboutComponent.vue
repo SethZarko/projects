@@ -64,7 +64,7 @@ export default {
 #about-comp h4 {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.7rem;
     letter-spacing: 1px;
     text-align: center;
     margin: 1em auto;
@@ -88,6 +88,10 @@ export default {
 
 .sub-two {
     width: 100%;
+}
+
+.sub-one p, .sub-two p {
+    font-size: 1.1rem;
 }
 
 .about-item-container {
@@ -128,7 +132,6 @@ export default {
     .sub-one {
         font-size: 1.25rem;
     }
-
 }
 @media (min-width: 650px) {
     .sub-two {

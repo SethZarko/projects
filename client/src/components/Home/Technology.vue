@@ -13,7 +13,7 @@ export default {
         <h1>For the nerds 🤓</h1>
         <div class="tech-container">
 
-            <h3>Preferred Stack:</h3>
+            <h3>Main Stack:</h3>
             <p>Frontend: <img src="../../assets/vue-logo.png" alt="vue logo"> + <img src="../../assets/vite-logo.png"
                     alt="vite logo"> </p>
             <p>Backend: <img src="../../assets/node-logo.webp" /> + <img src="../../assets/express-logo.png"
@@ -66,7 +66,7 @@ li {
 #tech-comp h1 {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.75rem;
     text-align: center;
     margin: 0.5em auto 1em;
 }
@@ -74,7 +74,7 @@ li {
 #tech-comp h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     margin: 1.5em auto 1.75em;
 }
 
@@ -97,7 +97,7 @@ li {
     align-items: center;
     justify-content: space-between;
     gap: 1.15em;
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     margin: 1em auto;
     border: solid 1px rgb(20, 173, 255);
     padding: 1em;
@@ -121,7 +121,7 @@ li {
 
 .tech-container ul li {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     margin: 1em auto;
 }
 
@@ -134,13 +134,17 @@ li {
     display: flex;
     justify-content: space-between;
     gap: 3em;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 @media (min-width: 425px) {
     .tech-container img {
         width: 50px;
         height: 50px;
+    }
+
+    .tech-container p {
+        font-size: 1.15rem;
     }
 
     .mongoose {
@@ -159,6 +163,11 @@ li {
         height: 70px;
     }
 
+    .tech-container p {
+        font-size: 1.25rem;
+    }
+
+
     .mongoose {
         width: 125px !important;
         margin-left: -50px;
@@ -169,5 +178,6 @@ li {
     h3 {
         font-size: 1.75rem;
     }
+
 }
 </style>

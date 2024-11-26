@@ -47,7 +47,8 @@ export default {
             <h1 v-if="responseError">{{ responseError }}</h1>
 
             <div class="project-container" v-for="project in projects" :key="project._id">
-                <h1><i class="fa-solid fa-code"></i> {{ project.name }} <i class="fa-solid fa-code"></i></h1>
+                <h1>{{ project.name }}</h1>
+                <hr class="project-title-underline">
                 <div class="box">
                     <iframe :src="project.url" loading="lazy"></iframe>
                 </div>
@@ -62,8 +63,6 @@ export default {
                 <hr>
             </div>
             <router-link to="/portfolio" @click="this.scrollToTop">All Projects</router-link>
-            <hr class="divisor">
-            <br>
         </div>
     </section>
 </template>
@@ -78,9 +77,10 @@ export default {
 #recent-projects h1 {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 2.25rem;
+    font-size: 1.85rem;
     letter-spacing: 1px;
     margin: 0.5em auto 0.5em;
+    padding-top: 20px;
     color: white;
     text-align: center;
 }
@@ -97,20 +97,20 @@ export default {
     justify-content: center;
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: -2em auto;
 }
 
 .projects-container a {
-    width: 90%;
-    max-width: 500px;
+    width: 70%;
+    max-width: 400px;
     text-align: center;
-    margin: 0 auto 1em; 
+    margin: 1em auto 3em; 
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: white;
     border: solid 1px white;
     border-radius: 10px;
-    padding: 0.35em 1em;
+    padding: 0.25em 1em;
     background: black;
     transition: ease-in .2s;
 }
@@ -130,12 +130,12 @@ export default {
 }
 
 .project-container h1 {
-    font-size: 1.75rem !important;
+    font-size: 1.5rem !important;
 }
 
-.divisor {
-    width: 80%;
-    margin: 0 auto;
+.project-title-underline {
+    width: 10% !important;
+    margin: 0.5em auto 0 !important;
 }
 
 .go-to-btn {
@@ -175,7 +175,7 @@ export default {
 
 .project-container hr {
     width: 50%;
-    margin: 1em auto 3em;
+    margin: 2.5em auto -1.5em;
 }
 
 .box {
